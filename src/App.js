@@ -8,7 +8,7 @@ import Navigation from "./components/Navigation";
 function App() {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <h1>Hello, React</h1>
+        <h1>수정 테스트</h1>
         <Navigation />
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
