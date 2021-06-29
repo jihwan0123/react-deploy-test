@@ -37,11 +37,13 @@ jobs:
       run: yarn build
       
     - name: Deploy
-      run:
+      run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
-        git remote add origin "https://github.com/jihwan0123/react-deploy-test.git"
+        git remote set-url origin https://${github_token}@github.com/${repository}
         yarn deploy
       env:
         user_name: 'jihwan0123'
         user_email: 'qkdwlghks00@gmail.com'
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        repository: ${{ github.repository }}
