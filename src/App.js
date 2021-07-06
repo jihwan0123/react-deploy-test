@@ -8,7 +8,8 @@ import Navigation from "./components/Navigation";
 function App() {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div class="d-flex justify-content-center my-4">
+        <h3 className="mt-3 fw-bold text-center">Hello, React!</h3>
+        <div className="d-flex justify-content-center my-4">
           <Navigation />
         </div>
         <Route exact path="/" component={Home} />
